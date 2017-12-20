@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <script type="text/javascript">
+    //객체지향프로그래밍
+    //객체 안에 객체를 나열 할때 ,항상 주의!!
+    var grades = {
+      'list':{'ringgu':10,'k8805':6,'sorialgi':80,'abcd':100},
+      'show':function(){ //<--함수에 속해 있는 약속된 변수의 값 ex) grades
+        for(var name in this.list){
+          console.log(name, this.list[name]);
+        }
+      }
+    }
+    grades.show();
+  </script>
+</body>
+</html>

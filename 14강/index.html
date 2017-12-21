@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <script type="text/javascript">
+    //전역변수와 지역변수 , 함수는 모듈화의 근간
+    //유효범위(scope) = 변수의 수명을 의미!!!
+    var vscope = 'global';//전역변수 global
+    function fscope(){
+      var vscope = 'local';//지역변수 local
+      var lv = 'local variables'
+      alert(lv);
+    }
+    function fscope2(){
+      alert(vscope);
+    }
+    fscope();
+    fscope2();
+    //유효범위(scope)의 효용성
+    function a(){
+      var i = 0;
+    }
+    for(var i =0; i <5; i++){
+      a();
+      document.write(i);
+    }
+    (function(){
+      //전역변수를 사용하는 법
+      var MYAPP = {}//전역변수 변수값 객체
+      MYAPP.calculator = {
+        'left' : null,
+        'right' : null
+      }
+      MYAPP.coordinate = {
+        'left' : null,
+        'right' : null
+      }
+      MYAPP.calculator.left = 10;
+      MYAPP.calculator.right = 20;
+      function sum(){
+        return MYAOO.calculator.left+MYAPP.calculator.right;
+      }
+      document.write(sum());
+    }());//익명함수!!!어떠한 전역변수도 용납하고 싶지 않을 때
+    //정적 유효범위(scope)
+    //자바스크립트는 함수가 선언된 시점에서의 유효범위를 갖는다. 이러한 유효범위의 방식을 정적 유효범위 혹은 렉시컬이라고 한다.
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+</head>
+<body>
+  <script type="text/javascript">
+  //javascript와 정규표현식(regular expression)
+  /*
+    정규표현식은 문자열에서 특정한 문자를 찾아내는 도구다. 이 도구를 이용하면 수십줄이 필요한 작업을 한줄로 끝낼 수 있다.
+    정규표현식은 하나의 언어라고 할 수 있다.
+
+    정규표현식은 두 가지 단계로 이루어진다. 하나는 컴파일(compile) 다른 하나는 실행(execution)이다.
+    -컴파일
+    컴파일은 검출하고자 하는 패턴을 만드는 일이다. 우선 정규표현식 객체를 만들어야 한다. 객체를 만드는 방법은 두가지!
+    a라는 텍스트를 찾아내는 정규표현식을 만들자!!!
+  */
+  //정규표현식 리터럴
+  var pattern = /a/;//a는 우리가 찾고자하는 대상이다라고 알려준다
+  //정규표현식 객체 생성자
+  var pattern = new RegExp('a');//RegExp <-- regular expression 약자
+  </script>
+</body>
+</html>
